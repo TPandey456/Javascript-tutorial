@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            height: 50px;
+            width: 200px;
+            background-color:brown;
+        }
+
+        .but {
+            color: red;
+            background-color: yellow;
+            /* border: 5 px solid red; */
+            margin-left: 70px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 100px;
+            background-color: blueviolet;
+        }
+       p{
+        background-color: brown;
+       }
+    </style>
+</head>
+
+<body>
+    <form>
+        Number1: <input type="number" name="" id="no1"> <br> <br>
+        Number2 : <input type="number" id="no2"> <br> <br>
+        Number3 : <input type="number" id="no3"> <br> <br>
+
+        <input class="but" type="button" name="" onclick="largest()" value="Submit">
+        <h1 id="res"></h1>
+    </form>
+
+    <script>
+        function largest() {
+            let p = parseInt(document.getElementById("no1").value);
+            let q = parseInt(document.getElementById("no2").value);
+            let r = parseInt(document.getElementById("no3").value);
+
+            if (p > q && p > r) {
+                document.getElementById("res").innerHTML = "Number " + p + " is gretaer than";
+                document.getElementById("res").style.color = "red";
+            }
+            else if (q > p && q > r) {
+                document.getElementById("res").innerHTML = "Number " + q + " is gretaer than";
+                document.getElementById("res").style.color = "red";
+            }
+            else {
+                document.getElementById("res").innerHTML = "Number " + r + " is gretaer than";
+                document.getElementById("res").style.color = "red";
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>

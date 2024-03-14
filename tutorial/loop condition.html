@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <style>
+           
+        </style>
+
+</head>
+<body>
+    Percentage: <input type="text" id="per" class="mt-5 " ><br><br><br>
+    <input type="button" onclick="display()" value="Submit">
+    <!-- <button id="buttonDemo" style="background:skyblue;margin-left:10px;">Press  -->
+    <h2 id="res"></h2>
+    
+    <script>
+        function display(){
+
+            let p =parseInt(document.getElementById("per").value); /*  here we take the input associate with the input tag that's why we use per */
+
+            if (p>60) {
+                document.getElementById("res").innerHTML="Passed";  /* here we print the result/output that's why we use res */
+
+            }
+            else if (p==60){
+                document.getElementById("res").innerHTML="Just Passed"
+            }
+
+            else{
+                document.getElementById("res").innerHTML="Failed"
+            }
+        }
+    </script>
+</body>
+</html>
