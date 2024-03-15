@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter a first number: <input type="text" id="no1"><br><br>
+    Enter a second number: <input type="text" id="no2"><br><br>
+    Enter ur Operator that u want: <input type="text" name="" id="ope"><br><br>
+    <input type="button" value="Submit" onclick="operation()"><br><br>
+
+    Again You Want access this operatio : <input type="text" id="ye">
+     <input type="button" value="YES" onclick="yes()"><br><br>
+    <h1 id="res"></h1>
+
+    <script>
+        function operation(){
+          let p=parseInt(document.getElementById("no1").value);
+          let q= parseInt(document.getElementById("no2").value);
+          let o=document.getElementById("ope").value;
+          switch(o){
+            case "+": 
+            document.getElementById("res").innerHTML=p+q;
+            break;
+
+            case "-":
+            document.getElementById("res").innerHTML=p-q;
+            break;
+
+            case "*": 
+            document.getElementById("res").innerHTML=p*q;
+            break;
+
+            default: 
+            document.getElementById("res").innerHTML=p/q;
+            break;
+          }
+        }
+
+        function yes(){
+            let u=document.getElementById("ye").value;
+
+            if (u=="Yes"){
+                operation()
+            }
+            else{
+                document.getElementById("res").innerHTML="Thankx For using this"
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

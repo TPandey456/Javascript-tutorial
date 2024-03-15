@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter a word : <input type="text" id="word">
+
+    <input type="button" onclick="word()" value="Submit">
+    <h1 id="res"></h1>
+
+    <script>
+        function word() {
+            let name = document.getElementById("word").value;
+            // switch (name) {
+            //     case "a":
+            //     case "e": 
+            //     case "i":
+            //     case "o":
+            //     case "u":
+            //         document.getElementById("res").innerHTML = "vowel"
+            //         break;
+            //     default:
+            //         document.getElementById("res").innerHTML = "constant"
+            //         break;
+            // }
+
+
+            let vowel = "aeiou"
+
+            if (name == vowel) {
+                document.getElementById("res").innerHTML = "Vowel"
+            }
+            else {
+                document.getElementById("res").innerHTML = "Constant"
+            }
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
