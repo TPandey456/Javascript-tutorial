@@ -14,7 +14,7 @@ console.log(id === nextid); */
 
 
 
-// Refernce type(Non-Primitive datatype)-memory k refernce store kie jata hai 
+// call by Refernce type(Non-Primitive datatype)-memory k refernce store kie jata hai 
 //  Array, objects,Functions
 
 // const heros = ["apple","mango","chiku","banna"] --array
