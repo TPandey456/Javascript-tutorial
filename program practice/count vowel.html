@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        Number1: <input type="text" name="" id="no1"> <br>
+        <input class="but" type="button" name="" onclick="largest()" value="Submit">
+        <h1 id="res"></h1>
+    </form>
+
+    <script>
+        function largest() {
+            let p = document.getElementById("no1").value;
+            let vow = ["a","e","i","o","u"]
+            let count = 0
+            let n=[]
+            
+
+            for (let i = 0; i < p.length; i++) {
+                for (let j=0 ; j< vow.length; j++){
+                    if (p[i] == vow[j]){
+                        count++  
+                        n.push(p[i])
+                    }
+
+                }
+            }
+            document.getElementById("res").innerHTML = "Vowel : " + n +"<br>"+ count;
+
+        }
+    </script>
+</body>
+
+</html>

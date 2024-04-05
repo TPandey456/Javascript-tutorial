@@ -59,6 +59,33 @@ let v=" A blue bottle with a blur liquid is on a blue table Blue"
 //  Method 2 
 
 let m=v.replace(/blue/g,"green") /* g means--> global  */
-console.log(m);
+// console.log(m);
 
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ SUBSTRING() +++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+let z= "Tanishq Pandey"
+let p= z.substring(0,10)
+console.log(p);
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++ SUBSTR() +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+// let z= "Javascript W0rld"
+// let p= z.substr(0,10)
+// // console.log(p);
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ INDEXOF - -- return the position of first occurences ++++++++++++++++++ */
+
+let a= "Tanishq Pandey"
+let d =a.indexOf("Pandey")
+// console.log(d);
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ last index of---- it find the last index of word +++++++++++++++++++++++++ */
+
+let am="javascript Word ! Welcome to Word"
+let vm= am.lastIndexOf("Word")
+console.log(vm);

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        Number1: <input type="text" name="" id="no1"> <br>
+        <input class="but" type="button" name="" onclick="largest()" value="Submit">
+        <h1 id="res"></h1>
+    </form>
+
+    <script>
+        function largest() {
+            let email = document.getElementById("no1").value;
+            let pos = email.indexOf("@")
+            let user= email.substring(0,pos)
+            let domain = email.substring(pos+1,email.length) 
+            document.getElementById("res").innerHTML="Username--> "+user + "<br>"+ "Domain--> "+domain
+            }
+
+    
+    </script>
+</body>
+
+</html>

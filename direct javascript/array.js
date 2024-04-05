@@ -1,10 +1,10 @@
-// let myArr =[0,1,2,3,4,5,6,7,8,9]
+let myArr =[0,1,2,3,4,5,6,7,8,9]
 // console.log(myArr[4])
 
 // let myArr =[0,1,2,3,4,5,6,7,8,9]
 // let c=["a","b","c","d","e"]
 // let d=new Array(1,2,3,4,5)
-// console.log(myArr[4])
+// console.log(myArr[4])s
 
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++ Array Methods +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -50,6 +50,7 @@
 // console.log(myArr.indexOf(6));
 
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ TYPEOF ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // let new1=myArr.join()
 // console.log(myArr);
 // console.log(new1);
@@ -148,7 +149,7 @@ but in concatinition there is limitation that only 1 can be use    */
 let z= [55,30,10,100,20];
 
 z.sort();
-console.log(z);
+// console.log(z);
 // z.reverse()
 
 // for(let i=0 ; i< z.length ; i++)
@@ -178,4 +179,4 @@ let score1 =100
 let score2 = 200 
 let score= 300 
 
-console.log(Array.of(score1,score2,score));   /* we can concate in array  */
+// console.log(Array.of(score1,score2,score));   /* we can concate in array  */

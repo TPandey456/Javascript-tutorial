@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h3{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    Enter Email: <input type="email" id="email"><br>
+    <h3 id="err"></h3>
+    <input type="button" value="Submit" onclick="percentage()">
+   
+    <script>
+        function percentage(){
+            let email= document.getElementById("email").value
+            let found = email.includes("@")
+            
+            if(found==false){
+            document.getElementById("err").innerHTML="Invalid Email"
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+
+    function percentage(){
+            let email= document.getElementById("email").value
+            let found = email.indexOf("@")
+            
+            if(found==-1){    if value is not find the return -1 
+            document.getElementById("err").innerHTML="Invalid Email"
+            }
+        }
+ -->
