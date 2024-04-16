@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        /* Custom CSS for form */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            height: 900px;
+
+        }
+
+        .image-container {
+            background-image: url("working\ image.jpg");
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            height: 900px;
+            border-radius: 10px;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                height: 300px;
+
+            }
+
+            .form-container {
+                padding: 5px;
+                /* Adjusted padding for smaller screens */
+                min-height: auto;
+            }
+        }
+
+
+
+        .image-container {
+            position: relative;
+            z-index: 1;
+            /* left: 10%; */
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 1;
+            left: 1%;
+        }
+
+        body {
+            background-image: url("background.jpg");
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="image-container"></div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-container">
+                    <form class=" bg-light " name="form">
+                        <div class="col-md-6 w-50  ">
+                            <label for="first" class="form-label justify-content-center mt=5">First Name</label>
+                            <input type="text" class="form-control" id="first" autocomplete="off" required
+                                onkeyup="ValidationName()">
+                            <span id="first-error" class="text-danger font-weight-regular">**Name is required</span>
+                        </div>
+
+                        <div class="col-md-6 w-50">
+                            <label for="last" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="last" autocomplete="off">
+                            <span id="last-error" class="text-danger font-weight-regular"></span>
+                        </div>
+
+                        <div class="col-md-6 w-50 ">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" autocomplete="off" required
+                                onkeyup="EmailValidation()">
+                            <span id="email-error" class="text-danger font-weight-regular">**Email is required</span>
+                        </div>
+                        <div class="col-md-6 w-50">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" autocomplete="off"
+                                onkeyup="PasswordValidation()">
+                            <span id="pass-error" class="text-danger font-weight-regular">**Password is required</span>
+                        </div>
+                        <div class="col-md-6 w-50">
+                            <label for="retype" class="form-label">Re-Type Password</label>
+                            <input type="password" class="form-control" id="retype" autocomplete="off" required
+                                onkeyup="retypeValidation()">
+                            <span id="retype-error" class="text-danger font-weight-regular">**Retype passsword is
+                                required</span>
+                        </div>
+                        <div class="col-md-6 w-50 mt-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address"
+                                placeholder="Apartment, studio, or floor" autocomplete="off"
+                                onkeyup="AddreesValidation()">
+                            <span id="address-error" class="text-danger font-weight-regular"></span>
+                        </div>
+                        <!-- 
+                        <div class="col-md-6 w-50">
+                            <label for="mobile" class="form-label">Contact Number</label>
+                            <input type="number" class="form-control" id="mobile" autocomplete="off" required>
+                            <span id="mobile-error" class="text-danger font-weight-regular">**Mobile Number is required</span>
+                        </div> -->
+
+                        <!-- <div class="col-md-6 w-50 mx-auto">
+                            <label for="City" class="form-label ">City</label>
+                            <select id="City " class="form-select" required>
+                                <option>Selcet City</option>
+                                <option>Kanpur Nagar</option>
+                                <option>Lucknow</option>
+                                <option>Mumbai</option>
+                                <option>Delhi</option>
+                            </select>
+                            <span id="Cities" class="text-danger font-weight-regular"></span>
+                        </div>
+                        <div class="col-md-6 w-50 mx-auto">
+                            <label for="State" class="form-label">State</label>
+                            <select id="State " class="form-select">
+                                <option> Select State</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharastra</option>
+                                <option>Delhi NCR</option>
+                            </select>
+                            <span id="state" class="text-danger font-weight-regular"></span>
+                        </div> 
+             -->
+
+                        <div class="col-md-6 w-50 mx-auto mt-5 ">
+                            <input type="submit" name="submit" value="submit" class="btn-danger ms-5"
+                                autocomplete="off">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+</body>
+
+<script>
+
+    var firstError = document.getElementById("first-error");
+    var LasError = document.getElementById("last-error");
+    var emailError = document.getElementById("email-error");
+    var passError = document.getElementById("pass-error");
+    var retypeError = document.getElementById("retype-error")
+    var addressError = document.getElementById("address-error");
+    var mobileError = document.getElementById("mobile-error");
+
+
+
+    function ValidationName() {
+        var first = document.getElementById("first").value;
+        if (first == 0) {
+            // document.getElementById("firstname").innerHTML = "** Please fill the username field"
+            firstError.innerHTML = "**Name is required"
+            return false
+        }
+
+        if (first.length <= 2 || first.length > 20) {
+            firstError.innerHTML = "**Name length between 2 to 20 "
+            return false
+        }
+
+        if (!isNaN(first)) {
+            firstError.innerHTML = "**Only Character is required"
+            return false;
+        }
+        firstError.innerHTML = "  Name is Valid Now! ";
+        return true;
+    }
+
+    function EmailValidation() {
+        var email = document.getElementById("email").value;
+
+        if (email.length == 0) {
+            emailError.innerHTML = "**Please Enter email "
+
+            return false;
+        }
+        if (!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+            emailError.innerHTML = "Email is Invalid! "
+            return false;
+        }
+
+        emailError.innerHTML = "Email is valid Now!"
+        return true;
+    }
+
+    function AddreesValidation() {
+        var address = document.getElementById("address").value;
+
+        if (!address.match(/^[a-zA-Z0-9\s\,\''\-]*$/)) {
+            addressError.innerHTML = "OOPS, Address is Invalid "
+            return false
+        }
+        addressError.innerHTML = "Address Is Valid Now!"
+        return true;
+    }
+
+    function PasswordValidation() {
+        var password = document.getElementById("password")
+
+        if (password.length == 0) {
+            passError.innerHTML = "OOPS, Password is Invalid"
+            return false;
+        }
+
+        if (password.length <= 5 || password.length > 20) {
+            passError.innerHTML = "OOPS ,Password length should be between 5 to 20"
+            return false;
+        }
+        if (!/[A-Z]/.test(password)) {
+            passError.innerHTML = "OOPS ,Password must contain at least one uppercase letter"
+            return false;
+        }
+        if (!/[a-z]/.test(password)) {
+            passError.innerHTML = "Password must contain at least one lowercase letter"
+            return false;
+        }
+
+        if (!/\d/.test(password)) {
+            passError.innerHTML = "Password must contain at least one digit"
+            return false;
+        }
+        if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+            passError.innerHTML = "Password must contain at least one special character like-@,#,$,&,%";
+            return false;
+        }
+        passError.innerHTML = "Password is valid Now!"
+        return true
+    }
+
+    function retypeValidation() {
+        var retype = document.getElementById("retype").value
+        if (retype != password) {
+            retypeError.innerHTML = 'OOPS, Password Mismatch'
+
+            return false;
+        }
+         retypeError.innerHTML="Password Matched !"
+         return true
+    }
+
+</script>
+
+</html>

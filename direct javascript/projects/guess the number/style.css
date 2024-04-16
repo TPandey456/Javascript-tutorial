@@ -1,0 +1,11 @@
+#wrapper{
+    text-align: center;
+    margin-top: 60px;
+    background-color: grey;
+}
+
+input[type=submit]{
+    background-color: black;
+    color: white;
+    
+}

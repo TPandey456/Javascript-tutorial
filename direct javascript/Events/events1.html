@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: brown; color: white;">
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images">
+            <li><img src="https://images.pexels.com/photos/20957444/pexels-photo-20957444/free-photo-of-empty-road.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="photoshop" width="200px" id="photoshop"></li>
+            <li><img src="https://images.pexels.com/photos/20898612/pexels-photo-20898612/free-photo-of-a-pink-cloud-over-a-snowy-mountain.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    width="200px" id="japan" alt=""></li>
+            <li><img src="https://images.pexels.com/photos/20435852/pexels-photo-20435852/free-photo-of-people-on-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    width="200px" id="river" alt=""></li>
+            <li><img src="https://images.pexels.com/photos/20435852/pexels-photo-20435852/free-photo-of-people-on-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    width="200px" id="owl" alt=""></li>
+            <li><img src="https://images.pexels.com/photos/20300495/pexels-photo-20300495/free-photo-of-a-bird-perched-on-a-wooden-pier-near-the-ocean.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    width="200px" id="prayer" alt=""></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    /* in js all events are working sequentially run
+     */
+
+
+    //  method 1 simply hmlog jo html k andr onclick lgedete hai vhi 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++Method 2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+    // document.getElementById('owl').onclick=function(){
+    //     alert("owl clicked")
+    // }
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++ Method 3+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    document.getElementById('owl').addEventListener('click',function(){
+        alert('owl click again')
+    },false) /* kbi kch aaysi applications hoti hai jo bine false or true k cmplt hi ni hoti hai  or bydefault bhi false hote hai  */
+</script>
+
+</html>

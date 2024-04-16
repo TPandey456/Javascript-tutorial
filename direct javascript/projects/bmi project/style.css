@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    text-align: center;
+    margin-top: 70px;
+    background-color: grey;
+    height: 500px;
+}
+form{
+    margin-top: 40px;
+}
+#guide{
+    margin-top: 50px;
+    font-size: 30px;
+}
+#guide ,p{
+    margin-top: 10px;
+}
+button{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+body{
+    background-color: black;
+}
+
+#result {
+    font-size: 35px;
+    margin-left: 90px;
+    margin-top: 20px;
+    color: rgb(241, 241, 241);
+  }

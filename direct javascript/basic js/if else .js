@@ -1,10 +1,10 @@
-//  < -- greater
+//  < -- less
 
-//  >-- less 
+//  >-- greater
 
-// <= greater than eqal to 
+// <= less than eqal to 
 
-// >== less than equal to 
+// >= Greater  than equal to 
 
 //  == comaprsion
 
@@ -124,10 +124,28 @@ if (username) {
 
 let emptyobj={}
 if (Object.keys(emptyobj).length===0){
- console.log("Objects is empty");
+//  console.log("Objects is empty");
 }
 
-/* 
+// Nullish Coalescing Operator (??): null defined 
+
+let val1; 
+
+val1= 5??10 
+val2 = null ?? 10
+val3 =undefined ?? 20
+// console.log(val1);
+// console.log(val2);
+console.log(val3);
+
+/*  agr null k value hai to uski safety  check krte hai  null k basis p kya pata koi program work n kre or aage loi problem aaye to uske lie y design kie gye hai  */
 
 
-*/
+
+
+/* +++++++++++++++++++++ Terniary Operator ++++++++++++++++++++++++++ */
+
+// condition ? true: false  
+
+let ice=100 
+ice <= 80 ? console.log("Less than 80"): console.log("More than 80");

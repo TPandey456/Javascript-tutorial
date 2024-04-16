@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type=button] {
+            background-color: rgb(0, 238, 255);
+            margin-right: 5px;
+            margin-top: 20px;
+            margin-left: 20px;
+            height: 30px;
+            width: 30px;
+
+        }
+
+        input[type=text] {
+            width: 250px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="txt"><br>
+    <input type="button" value="1" onclick="document.getElementById('txt').value+='1'">
+    <input type="button" value="2" onclick="document.getElementById('txt').value+='2'">
+    <input type="button" value="3" onclick="document.getElementById('txt').value+='3'">
+    <input type="button" value="+" onclick="document.getElementById('txt').value+='+'"><br>
+    <input type="button" value="4" onclick="document.getElementById('txt').value+='4'">
+    <input type="button" value="5" onclick="document.getElementById('txt').value+='5'">
+    <input type="button" value="6" onclick="document.getElementById('txt').value+='6'">
+    <input type="button" value="-" onclick="document.getElementById('txt').value+='-'"><br>
+    <input type="button" value="7" onclick="document.getElementById('txt').value+='7'">
+    <input type="button" value="8" onclick="document.getElementById('txt').value+='8'">
+    <input type="button" value="9" onclick="document.getElementById('txt').value+='9'">
+    <input type="button" value="*" onclick="document.getElementById('txt').value+='*'"><br>
+    <input type="button" value="0" onclick="document.getElementById('txt').value+='0'">
+    <input type="button" value="c" onclick="document.getElementById('txt').value=''">
+    <input type="button" value="/" onclick="document.getElementById('txt').value+='/' ">
+    <input type="button" value="=" onclick="document.getElementById('txt').value=eval(document.getElementById('txt').value)">
+
+    <h1 id="res"></h1>
+</body>
+
+
+</html>

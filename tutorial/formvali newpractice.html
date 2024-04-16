@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form">
+        <!-- username: <input type="text" name="field"> <br><br> -->
+        username: <input type="text" name="field"><small id="nsmall"></small> <br><br>
+
+        <input type="submit" name="btn" value="Submit">
+    </form>
+</body>
+<script>
+    function validation(){
+        var ptrn=/^([^0-9\W]*)$/;
+        if(ptrn.test(document.form.field.value)){
+            // document.form.field.style.backgroundColor="white" /* y first method the jo upr comment kie hai uske */
+            document.getElementById("nsmall").textContent="User is valid"
+            document.getElementById("nsmall").style.Color="green"
+            document.getElementById("nsmall").textContent="User is valid"
+            document.getElementById("nsmall").style.fontSize="20px"
+            document.getElementById("nsmall").textContent="User is valid"
+            document.getElementById("nsmall").style.marginLeft="10px"
+        }else{
+            // document.form.field.style.backgroundColor="red"
+            document.getElementById("nsmall").textContent="User is Invalid"
+            document.getElementById("nsmall").style.Color="red"
+            document.getElementById("nsmall").textContent="User is valid"
+            document.getElementById("nsmall").style.fontSize="20px"
+            document.getElementById("nsmall").textContent="User is valid"
+            document.getElementById("nsmall").style.marginLeft="10px"
+
+        }
+    }
+    // document.form.field.addEventListener("keyup",validation)
+    document.form.field.addEventListener("blur",validation)
+
+</script>
+</html>

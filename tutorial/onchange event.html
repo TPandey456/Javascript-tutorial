@@ -1,0 +1,33 @@
+<!-- ++++++++++++++++++++++++++++++++++++++ Onchange +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function colors(){
+            let color=document.getElementsByName("a")
+            if(color[0] .checked)
+            {
+                document.body.style.backgroundColor='red'
+            }
+
+            if(color[1] .checked)
+            {
+                document.body.style.backgroundColor='pink'
+            }
+
+            if(color[2].checked)
+            {
+                document.body.style.backgroundColor='yellow'
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" value="red" name="a" onchange="colors()">Red
+    <input type="radio" value="pink" name="a" onchange="colors()">Pink
+    <input type="radio" value="yellow" name="a" onchange="colors()">Yellow
+</body>
+</html>

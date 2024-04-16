@@ -95,7 +95,7 @@ v()
 // console.log(addtwo(3,4));
 // 
 
-//  Note :  If we rap the {} so retunr keyword is mandatory
+//  Note :  If we rap the {} so return keyword is mandatory
 
 /* +++++++++++++++++++++++ +++++++++++++++++++++ Implicit ++++++++++++++++++++++++++++++++*/
 

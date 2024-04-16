@@ -1,0 +1,29 @@
+.canvas{
+    height: 200px auto 200px;
+    width: 80%;
+}
+
+.button{
+    height:200px;
+    width: 200px;
+    border: 2px solid black;
+    display: inline-block;
+}
+.span{
+    display: block;
+}
+#grey {
+    background-color: gray;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#blue{
+    background-color: blueviolet;
+}
+
+#green{
+    background-color: green;
+}
